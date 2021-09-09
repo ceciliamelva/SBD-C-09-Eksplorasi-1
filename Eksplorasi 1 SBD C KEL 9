@@ -1,0 +1,94 @@
+group: beauty clinic
+
+staff = {
+staff_id, first_staffname, last_staffname, staff_gender, clinic_id
+'S001', 'Elio', 'Putra', 'L', 'JKT01'
+'S002', 'Raka', 'Argananta', 'L', 'SUB01'
+'S003', 'Kalea', 'Pradita', 'P', 'JKT01'
+'S004', 'Naura', 'Allegra', 'P', 'JKT02'
+'S005', 'Rafanka', 'Aurel', 'P', 'JKT02'
+'S006', 'Ivana', 'Erisha', 'P', 'SUB02'
+'S007', 'Maraka ', 'Evano', 'L', 'JOG01'
+'S008', 'Renda', 'Tyas', 'P', 'SUB01'
+'S009', 'Rima', 'Fairuz', 'P', 'JOG02'
+}
+
+billing = {
+patient_id, payment_status, total_price, billing_date, staff_id
+'P001', 'Paid', 145000, '10-Jul-2021', 'S003'
+'P002', 'Paid', 150000, '12-Jul-2021', 'S005'
+'P003', 'Paid', 130000, '13-Jul-2021', 'S009'
+'P004', 'Paid', 145000, '15-Jul-2021', 'S004'
+'P005', 'Paid', 125000, '20-Jul-2021', 'S002'
+'P006', 'Paid', 125000, '20-Jul-2021', 'S006'
+'P007', 'Paid', 125000, '26-Jul-2021', 'S009'
+'P008', 'Failed', 130000, '29-Jul-2021', 'S008'
+'P009', 'Failed', 130000, '1-Aug-2021', 'S003'
+'P010', null, 150000, '2-Aug-2021', 'S006'
+}
+
+patient = {
+patient_id, first_patientname, last_patientname, patient_gender, patient_age, patient_city, phone_number
+'P001', 'Elly', 'Citra', 'P', 50, 'Surabaya', 087854398545
+'P002', 'Ziva', 'Magnolya', 'P', 20, 'Jakarta', 087858905346
+'P003', 'Nadin', 'Amizah', 'P', 21, 'Jakarta', 081660021155
+'P004', 'Citra', 'Putri', 'P', 43, 'Jogjakarta', 085755293337
+'P005', 'Jerome ', 'Polin', 'L', 23, 'Surabaya', 087761970950
+'P006', 'Dewi', 'Lestari', 'P', 37, 'Surabaya', 08955378820
+'P007', 'Permata', 'Raini', 'P', 52, 'Jogjakarta', 08564204939
+'P008', 'Bayu', 'Hendrawan', 'L', 26, 'Surabaya', 08565455826
+'P009', 'Laksamana', 'Dudi', 'L', 34, 'Jakarta', 081803770005
+'P010', 'Tiara', 'Pangestika', 'P', 28, 'Jakarta', 08922629930
+}
+
+clinic = {
+clinic_id, clinic_city, name_clinic, clinic_status
+'JKT01', 'Jakarta', 'Beauty Kemayoran Clinic', 'Main'
+'JKT02', 'Jakarta', 'Beauty Gandaria Clinic', 'Branch'
+'SUB01', 'Surabaya', 'Beauty Keputih Clinic', 'Branch'
+'SUB02', 'Surabaya', 'Beauty Semampir Clinic', 'Branch'
+'JOG01', 'Jogjakarta', 'Beauty Taman Sari Clinic', 'Branch'
+'JOG02', 'Jogjakarta', 'Beauty Danurejan Clinic', 'Branch'
+}
+
+treatment = {
+patient_id, doctor_id, treatment_date, treatment_status, clinic_id
+'P001', 'DOC01', '10-Jul-2021', 'DONE', 'JKT01'
+'P002', 'DOC02', '12-Jul-2021', 'DONE', 'JKT02'
+'P003', 'DOC03', '13-Jul-2021', 'DONE', 'JOG02'
+'P004', 'DOC02', '15-Jul-2021', 'DONE', 'JKT02'
+'P005', 'DOC05', '20-Jul-2021', 'DONE', 'SUB01'
+'P006', 'DOC06', '24-Jul-2021', 'DONE', 'SUB02'
+'P007', 'DOC07', '26-Jul-2021', 'DONE', 'JOG02'
+'P008', 'DOC08', '29-Jul-2021', 'DONE', 'SUB01'
+'P009', 'DOC01', '1-Aug-2021', 'DONE', 'JKT01'
+'P010', 'DOC04', '2-Aug-2021', 'NOT YET', 'SUB02'
+}
+
+service = {
+service_id, service_name, patient_id, price
+'AAF', 'Anti-Aging Facial', 'P001', 145000
+'CEP', 'Chemical Peeling', 'P002', 150000
+'BRF', 'Brightening Facial', 'P003', 130000
+'AAF', 'Anti-Aging Facial', 'P004', 145000
+'ACF', 'Acne Facial', 'P005', 125000
+'ACF', 'Acne Facial', 'P006', 125000
+'ACF', 'Acne Facial', 'P007', 125000
+'BRF', 'Brightening Facial', 'P008', 130000
+'BRF', 'Brightening Facial', 'P009', 130000
+'CEP', 'Chemical Peeling', 'P010', 150000
+}
+
+doctor = {
+doctor_id, first_doctorname, last_doctorname, doctor_gender, doctor_type, clinic_id
+'DOC01', 'Agus', 'Winarko', 'L', 'GENERALIST', 'JKT01'
+'DOC02', 'Dewi', 'Gangga', 'P', 'GENERALIST', 'JKT02'
+'DOC03', 'Eva ', 'Carolina', 'P', 'SPECIALIST', 'JOG02'
+'DOC04', 'Susan ', 'Ikawati', 'P', 'GENERALIST', 'SUB02'
+'DOC05', 'David', 'Yoga', 'L', 'SPECIALIST', 'SUB01'
+'DOC06', 'Irma', 'Novita', 'P', 'SPECIALIST', 'SUB02'
+'DOC07', 'Dyah', 'Syafitri', 'P', 'SPECIALIST', 'JOG02'
+'DOC08', 'Leon', 'Putra', 'L', 'SPECIALIST', 'SUB01'
+'DOC09', 'Alana', 'Tria', 'P', 'SPECIALIST', 'JOG01'
+}
+
